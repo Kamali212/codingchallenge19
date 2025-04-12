@@ -6,7 +6,8 @@ function Gallery() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-{/* Fetch tours from API */}
+// Fetch tours from API
+// Corrected by Co-Pilot
 const fetchTours = async () => {
     try {
         const response = await fetch("https://www.course-api.com/react-tours-project");
@@ -15,6 +16,7 @@ const fetchTours = async () => {
         }
         const data = await response.json();
         setTours(data);
+        setLoading(false);
     } catch (error) {
         setError(true);
         setLoading(false);
@@ -33,15 +35,18 @@ if (loading) {
 if (error) {
     return <h2>Something went wrong...</h2>;
 };
-// Render if no tours available
 if (tours.length === 0) {
-    <>
-    return <h2>No tours available</h2>;
-    <button onClick={fetchTours}>Refresh</button>;
-    </>
+    return (
+        <>
+            <h2>No tours available</h2>
+            <button onClick={fetchTours}>Refresh</button>
+        </>
+    );
+}
+const removeTour = (id) => {
+    setTours(tours.filter((tour) => tour.id !== id));
 };
 
-// Render list of tours 
 return (
     <section className="gallery">
       {tours.map((tour) => {
