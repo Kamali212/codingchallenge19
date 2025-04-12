@@ -29,7 +29,7 @@ useEffect(() => {
 
 // Render loading state
 if (loading) {
-    return <h2>Loading...</h2>;
+    return <h2>Loading Tours...</h2>;
 };
 // Render error state
 if (error) {
