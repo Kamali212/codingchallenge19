@@ -6,7 +6,7 @@ function Gallery() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-// Fetch tours from API
+{/* Fetch tours from API */}
 const fetchTours = async () => {
     try {
         const response = await fetch("https://www.course-api.com/react-tours-project");
@@ -20,7 +20,7 @@ const fetchTours = async () => {
         setLoading(false);
     }
 };
-// Run fetchTours when mounted
+{/* Run fetchTours when mounted */}
 useEffect(() => {  
     fetchTours();
 } , []);
