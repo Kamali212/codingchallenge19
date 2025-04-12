@@ -1,0 +1,119 @@
+/* Basic page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Gallery section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Tour card styling */
+.tour-card {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 18.75rem; /* 300px */
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tour-card img {
+    width: 100%;
+    height: 12.5rem; /* 200px */
+    object-fit: cover;
+}
+
+.tour-card h3 {
+    margin: 0.625rem 0 0.3125rem; /* 10px 0 5px */
+    font-size: 1.375rem; /* 22px */
+}
+
+.tour-card h4 {
+    margin: 0 0 0.625rem; /* 0 0 10px */
+    color: green;
+    font-size: 1.125rem; /* 18px */
+    font-weight: bold;
+}
+
+.tour-card p {
+    margin: 0 0.9375rem 0.9375rem; /* 0 15px 15px */
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.5;
+}
+
+/*  button style */
+.tour-card button {
+    margin: 0.625rem auto; /* 10px auto */
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    font-size: 0.875rem; /* 14px */
+    transition: background-color 0.3s ease;
+}
+
+.tour-card button:hover,
+.tour-card button:focus {
+    background-color: #0056b3;
+    outline: none;
+}
+
+/* Remove button */
+.btn-remove {
+    background-color: #dc3545;
+}
+
+.btn-remove:hover,
+.btn-remove:focus {
+    background-color: #b02a37;
+    outline: none;
+}
+
+/* Loading */
+h2 {
+    text-align: center;
+    margin: 1.25rem 0; /* 20px 0 */
+    font-size: 1.5rem; /* 24px */
+}
+
+/* Refresh button */
+.refresh-btn {
+    display: block;
+    margin: 1.25rem auto; /* 20px auto */
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem; /* 16px */
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.refresh-btn:hover,
+.refresh-btn:focus {
+    background-color: #1e7e34;
+    outline: none;
+}

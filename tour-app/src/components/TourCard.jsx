@@ -7,7 +7,6 @@ const TourCard = ({ id, name, info, image, price, onRemoveTour }) => {
     <article className="tour-card">
       <img src={image} alt={name} />
       <h3>{name}</h3>
-      <h2>{info}</h2>
       <h4>${price}</h4>
       <p>
         {/* Show all information if readMore is true */}
